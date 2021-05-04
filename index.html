@@ -12,6 +12,8 @@
          height: 100%;
          }
       </style>
+         <meta data-n-head="true" data-hid="og:url" name="og:url"
+      content="https://www.auxiliadorapredial.com.br/imovel/lancamento/279556/hyde-menino-deus-menino-deus-porto-alegre-rs" />
    </head>
    <body>
 <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
@@ -19,13 +21,12 @@
 <script>
     (function () {
         window.onload = function () {
-            new BlipChat()
+            var blipClient = new BlipChat() 
             .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
             .withButton({"color":"#2CC3D5","icon":""})
-            .withCustomCommonUrl('https://chat.blip.ai/')
-            .build();
-        }
-    })();
+            .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+          function () { blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
+         blipClient.build(); } })();
 </script>
                                 
    </body>
