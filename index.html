@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
@@ -21,21 +22,12 @@
 <script>
     (function () {
         window.onload = function () {
-            var blipClient = new BlipChat()
-                .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
-                .withButton({ "color": "#2CC3D5", "icon": "" })
-                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
-                    client.sendMessage({
-                        type: "text/plain",
-                        content: "teste",
-                        metadata: {
-                            "#blip.hiddenMessage": true
-                        }
-                    });
-                })
-                .build();
-        }
-    });
+            var blipClient = new BlipChat() 
+            .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
+            .withButton({"color":"#2CC3D5","icon":""})
+            .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+          function () { blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
+         blipClient.build(); } })();
 </script>
                                 
    </body>
