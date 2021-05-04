@@ -20,8 +20,6 @@
          height: 100%;
       }
    </style>
-   <meta data-n-head="true" data-hid="og:url" name="og:url"
-      content="https://www.auxiliadorapredial.com.br/imovel/lancamento/279556/hyde-menino-deus-menino-deus-porto-alegre-rs" />
 </head>
 
 <body>
@@ -35,7 +33,9 @@
                .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
                .withButton({ "color": "#2CC3D5", "icon": "" })
                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
+                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual, "metadata": {
+      "#blip.hiddenMessage": true
+    }}); });
             blipClient.build();
          }
       })();
