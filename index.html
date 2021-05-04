@@ -25,7 +25,7 @@
             .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
             .withButton({"color":"#2CC3D5","icon":""})
             .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-          function () { blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": "testeeeee" }); }); 
+          function () { blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
          blipClient.build(); } })();
 </script>
                                 
