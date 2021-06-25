@@ -28,6 +28,8 @@
       (function () {
          window.onload = function () {
             var blipClient = new BlipChat()
+               .withTarget("Testeeeee")
+               .withCustomStyle("div { padding: 0; }")
                .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
                .withButton({ "color": "#2CC3D5", "icon": "" })
                .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
