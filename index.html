@@ -27,11 +27,20 @@
       var url_atual = window.location.href;
       (function () {
          window.onload = function () {
+              var customStyle = `#message-input {
+              box-sizing: border-box;
+              border: 1px solid #0CC8CC;
+              border-radius: 6px;
+              background: #252B39;
+            }
+            #message-input textarea {
+              background: #252B39;
+              font-size: 12px;
+              color: white;
+            }`
             var blipClient = new BlipChat()
-               .withTarget("Testeeeee")
-               .withCustomStyle("div { padding: 0; }")
                .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
-               .withButton({ "color": "#2CC3D5", "icon": "" })
+               .withButton({ "color": "#2CC3D5", "icon": "Testeeee" })
                .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
                   function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
