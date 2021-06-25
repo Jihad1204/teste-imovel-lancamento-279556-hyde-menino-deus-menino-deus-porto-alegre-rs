@@ -40,7 +40,8 @@
             }`
             var blipClient = new BlipChat()
                .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
-               .withButton({ "color": "#2CC3D5", "icon": "Testeeee" })
+               .withButton({ "color": "#2CC3D5", "icon": "" })
+               .withCustomStyle(customStyle);
                .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
                   function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
