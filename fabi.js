@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const closeId = "blip-chat-close-icon";
   const chatContainer = "blip-chat-container";
 
-  const startingColor = "#00833f";
+  const startingColor = "#820023";
   const displayClassName = "display";
   const hideClassName = "hide";
 
@@ -63,10 +63,9 @@ document.addEventListener("DOMContentLoaded", function(){
     message.id = "message";
     message.innerHTML = bubbleMessage;
 
-    if ( window.location.pathname == '/' ) {
-      bubble.appendChild(message);
-      bubble.appendChild(triangle);
-    }
+
+    bubble.appendChild(message);
+    bubble.appendChild(triangle);
 
     bubbleContainer.appendChild(bubble);
 
@@ -95,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function(){
     oldImage.remove();
 
   }
+  
+  var url_atual = window.location.href+'/venda/266548/';
 
   client
     .withAppKey(appKey)
@@ -110,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function(){
     .withEventHandler(BlipChat.LEAVE_EVENT, function () {
       closeIcon.classList.add(hideClassName);
       closeIcon.classList.remove(displayClassName);
+    })
+    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){ 
+      client.sendMessage({ "type": "text/plain", "content": url_atual }); 
     })
     .build();
 
