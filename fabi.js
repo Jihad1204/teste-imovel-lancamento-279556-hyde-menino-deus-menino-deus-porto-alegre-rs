@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", function(){
   const closeId = "blip-chat-close-icon";
   const chatContainer = "blip-chat-container";
 
-  const startingColor = "#820023";
+  const startingColor = "#00833f";
   const displayClassName = "display";
   const hideClassName = "hide";
 
-  const appKey = "ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1";
+  const appKey = "bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1";
 
-  const topImage = "https://brognoli.com.br/wp-content/themes/brognoli-child/images/fabi_chat.png";
+  const topImage = "https://blipmediastore.blob.core.windows.net/public-medias/Media_ce5dff3d-3e4b-4ce8-858b-7073d1fdb503";
 
-  const bubbleMessage = "OlÃ¡, eu sou a Fabi! Como posso te ajudar?";
+  const bubbleMessage = "Olá, eu sou a Lia! Como posso te ajudar?";
 
   const startMessage = {
     type: "text/plain",
-    content: "OlÃ¡",
+    content: "Olá",
     metadata: {
       "#blip.hiddenMessage": true
     }
