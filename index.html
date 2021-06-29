@@ -28,6 +28,23 @@
         function createBubble() {
             const bubbleMessage = "Olá, eu sou a Fabi! Como posso te ajudar?";
 
+            function displayBubble() {
+                bubble.classList.add(displayClassName);
+                bubble.classList.remove(hideClassName);
+            }
+
+            function hideBubble() {
+                bubble.classList.add(hideClassName);
+                bubble.classList.remove(displayClassName);
+            }
+
+            changeBubble = function () {
+                if (bubble.classList.contains(displayClassName))
+                    hideBubble();
+                else
+                    displayBubble();
+            }
+
             bubbleContainer = document.createElement("div");
             bubbleContainer.id = "bubble-container";
 
