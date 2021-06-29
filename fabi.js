@@ -16,15 +16,15 @@ document.addEventListener("DOMContentLoaded", function(){
   const displayClassName = "display";
   const hideClassName = "hide";
 
-  const appKey = "bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1";
+  const appKey = "ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1";
 
   const topImage = "https://brognoli.com.br/wp-content/themes/brognoli-child/images/fabi_chat.png";
 
-  const bubbleMessage = "Olá, eu sou a Fabi! Como posso te ajudar?";
+  const bubbleMessage = "OlÃ¡, eu sou a Fabi! Como posso te ajudar?";
 
   const startMessage = {
     type: "text/plain",
-    content: "Olá",
+    content: "OlÃ¡",
     metadata: {
       "#blip.hiddenMessage": true
     }
