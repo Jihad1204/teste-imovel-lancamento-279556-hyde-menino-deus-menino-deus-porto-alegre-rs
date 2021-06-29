@@ -112,10 +112,7 @@ document.addEventListener("DOMContentLoaded", function(){
       closeIcon.classList.add(hideClassName);
       closeIcon.classList.remove(displayClassName);
     })
-    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){ 
-      client.sendMessage({ "type": "text/plain", "content": url_atual,  metadata: {
-      "#blip.hiddenMessage": true
-    } }); 
+    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){ client.sendMessage({ "type": "text/plain", "content": url_atual,  metadata: { "#blip.hiddenMessage": true } }); 
     })
     .build();
 
