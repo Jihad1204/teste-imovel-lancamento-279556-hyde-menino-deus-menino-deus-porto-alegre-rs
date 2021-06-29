@@ -1,92 +1,17 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-    <title>Vendas Auxiliadora</title>
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100%;
-        }
-    </style>
-    <meta data-n-head="true" data-hid="og:url" name="og:url"
-        content="https://www.auxiliadorapredial.com.br/imovel/lancamento/279556/hyde-menino-deus-menino-deus-porto-alegre-rs" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Fabi</title>
 </head>
-
 <body>
-    <a href="https://jihad1204.github.io/teste-imovel-lancamento-330311-praca-nilo-petropolis-porto-alegre-rs/"
-        target="_parent"><button>Click me !</button></a>
-    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-    </script>
-    <script>
-        function createBubble() {
-            const bubbleMessage = "Olá, eu sou a Fabi! Como posso te ajudar?";
-
-            function displayBubble() {
-                bubble.classList.add(displayClassName);
-                bubble.classList.remove(hideClassName);
-            }
-
-            function hideBubble() {
-                bubble.classList.add(hideClassName);
-                bubble.classList.remove(displayClassName);
-            }
-
-            changeBubble = function () {
-                if (bubble.classList.contains(displayClassName))
-                    hideBubble();
-                else
-                    displayBubble();
-            }
-
-            bubbleContainer = document.createElement("div");
-            bubbleContainer.id = "bubble-container";
-
-            bubble = document.createElement("div");
-            bubble.id = "message-bubble";
-            bubble.onclick = function () { client.widget._openChat() }
-
-            var triangle = document.createElement("div");
-            triangle.id = "triangle";
-
-            var message = document.createElement("div");
-            message.id = "message";
-            message.innerHTML = bubbleMessage;
-
-            if (window.location.pathname == '/') {
-                bubble.appendChild(message);
-                bubble.appendChild(triangle);
-            }
-
-            bubbleContainer.appendChild(bubble);
-
-            document
-                .querySelector(`#${chatContainer}`)
-                .prepend(bubbleContainer);
-
-
-        }
-        var url_atual = window.location.href;
-        (function () {
-            window.onload = function () {
-                var blipClient = new BlipChat()
-                    .withAppKey('bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1')
-                    .withButton({ "color": "#2CC3D5", "icon": "" })
-                    .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
-                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                        function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
-                blipClient.build();
-                createBubble();
-            }
-        })();
-    </script>
-
+    <h1>Fabi</h1>
+    <!-- Fabi -->
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+    <link rel="stylesheet" href="fabi.css">
+    <script src="fabi.js" type="text/javascript"></script>
+    <!-- /Fabi -->
 </body>
-
 </html>
