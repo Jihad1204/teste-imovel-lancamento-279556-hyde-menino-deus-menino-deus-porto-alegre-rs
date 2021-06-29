@@ -20,7 +20,8 @@
 </head>
 
 <body>
-   <a href="https://jihad1204.github.io/teste-imovel-lancamento-330311-praca-nilo-petropolis-porto-alegre-rs/" target="_parent"><button>Click me !</button></a>
+   <a href="https://jihad1204.github.io/teste-imovel-lancamento-330311-praca-nilo-petropolis-porto-alegre-rs/"
+      target="_parent"><button>Click me !</button></a>
    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
    </script>
    <script>
@@ -29,10 +30,10 @@
          window.onload = function () {
             var blipClient = new BlipChat()
                .withAppKey('bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1')
-               .withButton({"color":"#00833f","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_ce5dff3d-3e4b-4ce8-858b-7073d1fdb503"})
+               .withButton({ "color": "#00833f", "icon": "https://blipmediastore.blob.core.windows.net/public-medias/Media_ce5dff3d-3e4b-4ce8-858b-7073d1fdb503" })
                .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
+                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual, metadata: { "#blip.hiddenMessage": true } }); });
             blipClient.build();
          }
       })();
