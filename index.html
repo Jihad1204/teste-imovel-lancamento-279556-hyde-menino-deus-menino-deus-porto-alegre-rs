@@ -28,11 +28,11 @@
       (function () {
          window.onload = function () {
             var blipClient = new BlipChat()
-               .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
-               .withButton({ "color": "#2CC3D5", "icon": "" })
+               .withAppKey('bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1')
+               .withButton({"color":"#00833f","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_ce5dff3d-3e4b-4ce8-858b-7073d1fdb503"})
                .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                  function () { blipClient.sendMessage({ "type": "text/plain", "content": "https://www.auxiliadorapredial.com.br/imovel/lancamento/279556/hyde-menino-deus-menino-deus-porto-alegre-rs" }); });
+                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
             blipClient.build();
          }
       })();
