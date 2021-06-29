@@ -3,31 +3,62 @@
 <html>
 
 <head>
-   <title>Vendas Auxiliadora</title>
-   <style>
-      html,
-      body {
-         height: 100%;
-         margin: 0;
-      }
+    <title>Vendas Auxiliadora</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
 
-      .full-height {
-         height: 100%;
-      }
-   </style>
-   <meta data-n-head="true" data-hid="og:url" name="og:url"
-      content="https://www.auxiliadorapredial.com.br/imovel/lancamento/279556/hyde-menino-deus-menino-deus-porto-alegre-rs" />
+        .full-height {
+            height: 100%;
+        }
+    </style>
+    <meta data-n-head="true" data-hid="og:url" name="og:url"
+        content="https://www.auxiliadorapredial.com.br/imovel/lancamento/279556/hyde-menino-deus-menino-deus-porto-alegre-rs" />
 </head>
 
 <body>
-   <a href="https://jihad1204.github.io/teste-imovel-lancamento-330311-praca-nilo-petropolis-porto-alegre-rs/" target="_parent"><button>Click me !</button></a>
-   <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-   </script>
-   <script>
-      var url_atual = window.location.href;
-      (function () {
-         window.onload = function () {
-              var customStyle = `#message-input {
+    <a href="https://jihad1204.github.io/teste-imovel-lancamento-330311-praca-nilo-petropolis-porto-alegre-rs/"
+        target="_parent"><button>Click me !</button></a>
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+    </script>
+    <script>
+        function createBubble() {
+            const bubbleMessage = "Olá, eu sou a Fabi! Como posso te ajudar?";
+
+            bubbleContainer = document.createElement("div");
+            bubbleContainer.id = "bubble-container";
+
+            bubble = document.createElement("div");
+            bubble.id = "message-bubble";
+            bubble.onclick = function () { client.widget._openChat() }
+
+            var triangle = document.createElement("div");
+            triangle.id = "triangle";
+
+            var message = document.createElement("div");
+            message.id = "message";
+            message.innerHTML = bubbleMessage;
+
+            if (window.location.pathname == '/') {
+                bubble.appendChild(message);
+                bubble.appendChild(triangle);
+            }
+
+            bubbleContainer.appendChild(bubble);
+
+            document
+                .querySelector(`#${chatContainer}`)
+                .prepend(bubbleContainer);
+
+
+        }
+        var url_atual = window.location.href;
+        (function () {
+            window.onload = function () {
+                var customStyle = `#message-input {
               box-sizing: border-box;
               border: 1px solid #0CC8CC;
               border-radius: 6px;
@@ -38,17 +69,18 @@
               font-size: 12px;
               color: white;
             }`
-            var blipClient = new BlipChat()
-               .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
-               .withButton({ "color": "#2CC3D5", "icon": "" })
-               .withCustomStyle(customStyle);
-               .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
-               .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
-            blipClient.build();
-         }
-      })();
-   </script>
+                var blipClient = new BlipChat()
+                    .withAppKey('dGVzdGVzYXV4OjM0ODA3ZmVlLTkxYTQtNGZjYS05YmRkLTg2MWU1M2YzZjJhNQ==')
+                    .withButton({ "color": "#2CC3D5", "icon": "" })
+                    .withCustomStyle(customStyle);
+                    .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+                        function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
+                blipClient.build();
+                createBubble();
+            }
+        })();
+    </script>
 
 </body>
 
