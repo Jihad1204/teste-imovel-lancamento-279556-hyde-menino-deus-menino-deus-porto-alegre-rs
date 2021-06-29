@@ -36,7 +36,7 @@
   font-weight: normal;
   font-size: 15px;
   color: var(--second-color);
-  background-color: #820023 ;
+  background-color: #00833f ;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
@@ -58,7 +58,7 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  background: #820023;
+  background: #00833f;
   transform: rotate(45deg);
   right: 28px;
   border-radius: 5px;
@@ -68,7 +68,7 @@
 }
 
 #blip-chat-close-icon {
-  background-color: #820023 !important;
+  background-color: #00833f !important;
   display: block !important;
   opacity: 0;
 }
@@ -78,8 +78,8 @@
   -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-  width: 75% !important;
-  height: 75% !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 #blip-chat-close-icon.hide {
@@ -114,18 +114,25 @@
 }
 
 #blip-chat-open-iframe {
-  background-image: url('https://brognoli.com.br/wp-content/themes/brognoli-child/images/fabi_chat.png') !important;
+  background-image: url('https://blipmediastore.blob.core.windows.net/public-medias/Media_ce5dff3d-3e4b-4ce8-858b-7073d1fdb503') !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   transition: var(--animation-duration) !important;
 }
+#blip-chat-container #blip-chat-open-iframe img, 
+#blip-chat-container #blip-chat-open-iframe svg{
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 #blip-chat-open-iframe.opened{
-  background-color: #820023 !important;
+  background-color: #00833f !important;
   background-image: none !important;
 }
 #blip-chat-open-iframe:hover {
-  background-color: #820023 !important;
+  background-color: #00833f !important;
   transition: var(--animation-duration) !important;
 }
 #blip-chat-container #blip-chat-open-iframe{
