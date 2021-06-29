@@ -3,10 +3,21 @@
 
 <body>
     <h1>Lia</h1>
-    <!-- Fabi -->
-    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-    <link rel="stylesheet" href="fabi.css">
-    <script src="fabi.js" type="text/javascript"></script>
-    <!-- /Fabi -->
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+   </script>
+   <script>
+      var url_atual = window.location.href;
+      (function () {
+         window.onload = function () {
+            var blipClient = new BlipChat()
+               .withAppKey('bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1')
+               .withButton({"color":"#00833f","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_ce5dff3d-3e4b-4ce8-858b-7073d1fdb503"})
+               .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
+               .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+                  function () { blipClient.sendMessage({ "type": "text/plain", "content": url_atual }); });
+            blipClient.build();
+         }
+      })();
+   </script>
 </body>
 </html>
