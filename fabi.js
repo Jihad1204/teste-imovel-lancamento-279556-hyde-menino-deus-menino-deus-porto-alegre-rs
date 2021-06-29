@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const displayClassName = "display";
   const hideClassName = "hide";
 
-  const appKey = "ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1";
+  const appKey = "bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1";
 
   const topImage = "https://brognoli.com.br/wp-content/themes/brognoli-child/images/fabi_chat.png";
 
