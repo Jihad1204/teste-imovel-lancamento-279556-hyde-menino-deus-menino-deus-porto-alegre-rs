@@ -18,22 +18,20 @@ html, body {
 
 <div class="full-height" id="blip"></div>
 
-   <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-   </script>
-   <script>
-      var url_atual = window.location.href;
-      (function () {
-         window.onload = function () {
-            var blipClient = new BlipChat()
-               .withAppKey('bGlhdmVuZGE6ZWZkMDQxNDktZDNhMC00ODI4LWE5MmItMWJjODM4MGEyYmQ1')
-               .withButton({ "color": "#2CC3D5", "icon": "" })
-               .withEventHandler(BlipChat.LOAD_EVENT, function () { window.localStorage.clear() })
-               .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                  function () { blipClient.sendMessage({ "type": "text/plain", "content":{ "state": "starting" } }); });
-            blipClient.build();
-         }
-      })();
-   </script>
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+            .withAppKey('cGVkcm9ncmFuYWRvaW1vdmVpc3JvdXRlcjE6MTc0MmExMDctYjcyNi00ZjE2LTk5ODItZDkyODg2YzQ0YThm')
+            .withButton({"color":"#334970","icon":""})
+            .withCustomCommonUrl('https://pedrogranado.chat.blip.ai/')
+            .build();
+            window.setTimeout(function() { window.blipClient.toogleChat() }, 3000);
+        }
+    })();
+</script>
                                 
 
 </body>
