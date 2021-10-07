@@ -31,7 +31,7 @@
                     .withAppKey('cGVkcm9ncmFuYWRvaW1vdmVpc3JvdXRlcjE6MTc0MmExMDctYjcyNi00ZjE2LTk5ODItZDkyODg2YzQ0YThm')
                     .withButton({ "color": "#334970", "icon": "" })
                     .withCustomCommonUrl('https://pedrogranado.chat.blip.ai/')
-                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
+                    .withEventHandler(BlipChat.ENTER_EVENT, function () {
                         blipClient.sendMessage({
                             "type": "text/plain",
                             "content": "oi"
