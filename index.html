@@ -1,36 +1,49 @@
-<meta charset="utf-8"/>
+<meta charset="utf-8" />
 <html>
-<head>
-<title>Boletos Brognoli</title>
-<style>
-html, body {
-  height: 100%;
-  margin: 0;
-}
 
-.full-height {
-  height: 100%;
-}
-</style>
+<head>
+    <title>Boletos Brognoli</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .full-height {
+            height: 100%;
+        }
+    </style>
 
 </head>
+
 <body>
 
-<div class="full-height" id="blip"></div>
+    <div class="full-height" id="blip"></div>
 
-<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-</script>
-      <script>
-         (function () { window.onload = function () { var blipClient = new BlipChat() 
-         .withAppKey('cGVkcm9ncmFuYWRvaW1vdmVpc3JvdXRlcjE6MTc0MmExMDctYjcyNi00ZjE2LTk5ODItZDkyODg2YzQ0YThm==')
-         .withButton({"color":"#334970"}) 
-         .withCustomCommonUrl('https://pedrogranado.chat.blip.ai/')
-         .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-          function () { blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
-         blipClient.build(); } })();
-      </script>
-                                
-                                
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+    </script>
+    <script>
+        (function () {
+            window.onload = function () {
+                var blipClient = new BlipChat()
+                    .withAppKey('cGVkcm9ncmFuYWRvaW1vdmVpc3JvdXRlcjE6MTc0MmExMDctYjcyNi00ZjE2LTk5ODItZDkyODg2YzQ0YThm')
+                    .withButton({ "color": "#334970", "icon": "" })
+                    .withCustomCommonUrl('https://pedrogranado.chat.blip.ai/')
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                        blipClient.sendMessage({
+                            "type": "text/plain",
+                            "content": "Start"
+                        });
+                    });
+                blipClient.build();
+            }
+        })();
+    </script>
+
+
+
 
 </body>
+
 </html>
